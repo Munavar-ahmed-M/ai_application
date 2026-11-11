@@ -3,6 +3,6 @@ import { chatController } from "#src/controllers/chat.controller.js";
 
 const router = express.Router();
 
-router.post("/chat", chatController);
+router.post("/website", chatController);
 
 export default router;

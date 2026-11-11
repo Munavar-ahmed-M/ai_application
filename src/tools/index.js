@@ -1,15 +1,23 @@
-import { getWeather } from "#src/tools/weather.tool.js";
-import { weatherTool } from "#src/tools/weather.defination.js";
-import { currencyTool } from "#src/tools/currency.defination.js";
-import { convertCurrency } from "#src/tools/currency.tool.js";
+import { createFile } from "./filesystem/create-file.tool.js";
+import { createDirectory } from "./filesystem/create-directory.tool.js";
+import { readFile } from "./filesystem/read-file.tool.js";
+import { deleteFile } from "./filesystem/delete-file.tool.js";
+import { listDirectory } from "./filesystem/list-directory.tool.js";
+import { createFileTool, createDirectoryTool, readFileTool, deleteFileTool, listDirectoryTool } from "./definations/filesystem-definations.js";
 
-export const toolDefinitions = [
-  {
-    functionDeclarations: [weatherTool, currencyTool],
-  },
-];
+// Google GenAI expects a list of tool objects, each containing functionDeclarations.
+export const toolDefinitions = [{ functionDeclarations: [
+  createFileTool,
+  createDirectoryTool,
+  readFileTool,
+  deleteFileTool,
+  listDirectoryTool,
+] }];
 
 export const toolFunctions = {
-  get_weather: getWeather,
-  convert_currency: convertCurrency,
+  create_file: createFile,
+  create_directory: createDirectory,
+  read_file: readFile,
+  delete_file: deleteFile,
+  list_directory: listDirectory,
 };

@@ -1,0 +1,11 @@
+{
+  "watch": ["src"],
+  "ignore": [
+    "sandbox/**",
+    "node_modules/**",
+    "dist/**",
+    "templates/**"
+  ],
+  "ext": "js,json",
+  "verbose": true
+}

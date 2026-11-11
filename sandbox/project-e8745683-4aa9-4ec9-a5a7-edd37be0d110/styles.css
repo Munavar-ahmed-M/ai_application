@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@400;600;700;800&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Custom Celestial Theme Styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #112232;
+    color: #e5eef6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #112232;
+}
+::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f3e5ab;
+}
+
+/* Star twinkle keyframes */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff;
+    border-radius: 50%;
+    animation: twinkle var(--duration, 3s) infinite ease-in-out;
+}
+
+/* Scratch card styling */
+#scratch-canvas {
+    touch-action: none;
+}
